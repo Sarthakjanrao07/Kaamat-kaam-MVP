@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Plus, Minus, X, Search } from "lucide-react";
+import Navbar from "@/src/components/Navbar";
 
 export default function Route_Map() {
   const [selectedRoute, setSelectedRoute] = useState("route1");
@@ -20,20 +21,7 @@ export default function Route_Map() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e] text-white">
       {/* Header */}
-      <header className="bg-black/30 backdrop-blur-lg px-4 py-3 shadow-md">
-        <div className="flex items-center justify-between">
-          {/* Logo */}
-          <div
-            className="flex items-center gap-2 cursor-pointer"
-            onClick={() => (window.location.href = "/")}
-          >
-            <div className="w-6 h-6 bg-yellow-400 rounded flex items-center justify-center">
-              <Search className="w-3 h-3 text-purple-700" />
-            </div>
-            <span className="font-medium text-sm">Kawasaki-ikhim</span>
-          </div>
-        </div>
-      </header>
+      <Navbar />
 
       <div className="flex flex-col lg:flex-row h-[calc(100vh-56px)]">
         {/* Left Panel */}

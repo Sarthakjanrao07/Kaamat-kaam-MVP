@@ -85,7 +85,7 @@ export default function Details_available() {
               <Search className="w-4 h-4 text-white" />
             </div>
             <span className="font-semibold text-lg bg-gradient-to-r from-purple-400 to-cyan-300 bg-clip-text text-transparent">
-              Kawasaki-ikhim
+              Homato
             </span>
           </div>
 

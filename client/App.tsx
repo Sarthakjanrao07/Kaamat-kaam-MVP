@@ -22,6 +22,10 @@ import Buy_Now from "./pages/buy_now";
 import Details_available from "./pages/details_available";
 import Landing_Page from "./pages/landing_page";
 import SupportPage from "./pages/support";
+import SignIn from "./pages/sign_in";
+import ForgotPassword from "./pages/forgot_password";
+import Register from "./pages/register";
+
 
 const queryClient = new QueryClient();
 
@@ -33,6 +37,9 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/account_page" element={<Index />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/sign_in" element={<SignIn />} />
+          <Route path="/forgot_password" element={<ForgotPassword />} />
           <Route path="/" element={<Publish_Route />} />
           <Route path="/order_booked" element={<OrderBooked />} />
           <Route path="/Book_Waiting" element={<Book_Waiting />} />
@@ -41,11 +48,13 @@ const App = () => (
           <Route path="/details_available" element={<Details_available />} />
           <Route path="/get_parcel" element={<Get_Parcel />} />
           <Route path="/conversation" element={<Glow_Nest />} />
+          <Route path="/publish_route" element={<Publish_Route />} />
           <Route path="/pick_up" element={<Pick_Up />} />
           <Route path="/route_map" element={<Route_Map />} />
           <Route path="/verify_details" element={<Verify_details />} />
-          <Route path="/landing_page" element={<Landing_Page />} />
+          {/* <Route path="/landing_page" element={<Landing_Page />} /> */}
           <Route path="/support" element={<SupportPage />} />
+          <Route path="/NotFound" element={<NotFound />} />
 
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

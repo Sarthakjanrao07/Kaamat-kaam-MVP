@@ -1,81 +1,86 @@
-import { Search } from "lucide-react";
+import { Search, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function order_booked() {
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-black text-white">
       {/* Header */}
-      <header className="bg-purple-600 text-white px-4 py-3">
-        <div className="flex items-center justify-between">
+      <header className="bg-black/30 backdrop-blur-lg border-b border-white/10 px-4 py-3 shadow-lg">
+        <div className="flex items-center justify-between container mx-auto">
           {/* Logo */}
-          <div className="flex items-center gap-2 cursor-pointer" onClick={() => window.location.href = "/"}>
-            <div className="w-6 h-6 bg-yellow-400 rounded flex items-center justify-center">
-              <Search className="w-3 h-3 text-purple-600" />
+          <div
+            className="flex items-center gap-2 cursor-pointer"
+            onClick={() => (window.location.href = "/")}
+          >
+            <div className="w-7 h-7 bg-gradient-to-r from-purple-500 to-cyan-400 rounded flex items-center justify-center">
+              <Search className="w-4 h-4 text-white" />
             </div>
-            <span className="font-medium text-sm">Kawasaki-ikhim</span>
+            <span className="font-semibold text-lg bg-gradient-to-r from-purple-400 to-cyan-300 bg-clip-text text-transparent">
+              Homato
+            </span>
           </div>
 
           {/* Navigation */}
           <div className="flex items-center gap-6 text-sm">
-            <a href="#" className="hover:text-purple-200">Search</a>
-            <a href="#" className="hover:text-purple-200">Take parcel</a>
-            <a href="#" className="hover:text-purple-200">Support</a>
+            <a href="/details_available" className="hover:text-yellow-300">
+              Search
+            </a>
+            <a href="/get_parcel" className="hover:text-yellow-300">
+              Take parcel
+            </a>
+            <a href="/support" className="hover:text-yellow-300">
+              Support
+            </a>
           </div>
         </div>
       </header>
 
-      {/* Main Content - Booking Success */}
-      <div className="bg-green-500 min-h-[calc(100vh-60px)] flex items-center justify-center">
-        <div className="flex items-center gap-16 max-w-4xl mx-auto px-4">
-          {/* Car Illustration */}
-          <div className="relative">
-            {/* Car with person */}
-            <div className="relative">
-              {/* Car body */}
-              <div className="w-64 h-32 bg-cyan-400 rounded-lg relative">
-                {/* Car windows */}
-                <div className="absolute top-2 left-8 w-48 h-16 bg-cyan-300 rounded-lg"></div>
-                
-                {/* Car wheels */}
-                <div className="absolute -bottom-4 left-4 w-12 h-12 bg-gray-800 rounded-full">
-                  <div className="absolute inset-2 bg-gray-600 rounded-full"></div>
-                </div>
-                <div className="absolute -bottom-4 right-4 w-12 h-12 bg-gray-800 rounded-full">
-                  <div className="absolute inset-2 bg-gray-600 rounded-full"></div>
-                </div>
-
-                {/* Car front grille */}
-                <div className="absolute top-8 -left-2 w-4 h-16 bg-gray-300 rounded-l-lg"></div>
-              </div>
-
-              {/* Person in car */}
-              <div className="absolute top-4 left-12 z-10">
-                <div className="w-8 h-8 bg-pink-300 rounded-full"></div>
-                <div className="w-12 h-16 bg-white rounded-lg mt-1"></div>
-              </div>
-
-              {/* Package/Item */}
-              <div className="absolute -top-4 left-20 z-20">
-                <div className="w-6 h-12 bg-orange-500 rounded-lg transform rotate-12"></div>
-              </div>
-            </div>
-          </div>
-
-          {/* Text and Buttons */}
-          <div className="text-center text-white">
-            <h1 className="text-4xl font-medium mb-8 leading-tight">
-              Booked! Enjoy your<br />
-              Service
-            </h1>
+      {/* Main Content */}
+      <div className="flex items-center justify-center min-h-[85vh] px-4">
+        <div className="w-full max-w-4xl bg-white/5 backdrop-blur-lg rounded-2xl p-10 shadow-2xl border border-white/10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             
-            <div className="flex gap-4">
-              <Button className="bg-white text-gray-800 hover:bg-gray-100 px-8 py-3 font-medium">
-                OK
-              </Button>
-              <Button className="bg-white text-cyan-500 hover:bg-gray-100 px-8 py-3 font-medium">
-                Contact
-              </Button>
+            {/* Left – Illustration */}
+            <div className="flex justify-center">
+              <div className="relative">
+                {/* Glow */}
+                <div className="absolute inset-0 blur-3xl bg-gradient-to-r from-purple-500/40 to-cyan-400/40 rounded-full"></div>
+
+                {/* Icon */}
+                <div className="relative z-10 w-40 h-40 bg-gradient-to-r from-purple-500 to-cyan-400 rounded-full flex items-center justify-center shadow-xl">
+                  <CheckCircle className="w-20 h-20 text-white" />
+                </div>
+              </div>
             </div>
+
+            {/* Right – Text */}
+            <div className="text-center md:text-left">
+              <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-cyan-300 bg-clip-text text-transparent">
+                Booking Confirmed!
+              </h1>
+
+              <p className="text-gray-300 mb-8 text-lg">
+                Your parcel service has been successfully booked.  
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                <Button
+                  onClick={() => (window.location.href = "/")}
+                  className="bg-gradient-to-r from-purple-500 to-cyan-400 hover:opacity-90 px-8 py-3 text-white font-medium shadow-lg"
+                >
+                  OK
+                </Button>
+
+                <Button
+                  variant="outline"
+                  className="border-cyan-400 text-cyan-300 hover:bg-cyan-400/10 px-8 py-3 font-medium"
+                  onClick={() => (window.location.href = "/support")}
+                >
+                  Contact Support
+                </Button>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>

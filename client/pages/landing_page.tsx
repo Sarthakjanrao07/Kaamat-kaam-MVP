@@ -51,7 +51,7 @@ export default function Landing_Page() {
             <div className="w-8 h-8 bg-yellow-400 rounded flex items-center justify-center">
               <Search className="w-4 h-4 text-brand-600" />
             </div>
-            <span className="font-semibold text-lg">Kawasaki Search</span>
+            <span className="font-semibold text-lg">Homato</span>
           </div>
 
           {/* Navigation */}

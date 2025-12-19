@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardContent } from "@/components/ui/card";
+import Navbar from "@/src/components/Navbar";
 
 export default function Conversation() {
   const feedPosts = [
@@ -33,43 +34,7 @@ export default function Conversation() {
     <div className="min-h-screen bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e] text-gray-100">
       
       {/* Navbar */}
-      <header className="bg-black/30 backdrop-blur-lg border-b border-white/10 px-4 py-3 shadow-lg">
-        <div className="flex items-center justify-between container mx-auto">
-          {/* Logo */}
-          <div className="flex items-center gap-2 cursor-pointer" onClick={() => window.location.href = "/"}>
-            <div className="w-7 h-7 bg-gradient-to-r from-purple-500 to-cyan-400 rounded flex items-center justify-center">
-              <Search className="w-4 h-4 text-white" />
-            </div>
-            <span className="font-semibold text-lg bg-gradient-to-r from-purple-400 to-cyan-300 bg-clip-text text-transparent">
-              Kawasaki Search
-            </span>
-          </div>
-
-          {/* Navigation */}
-          <div className="flex items-center gap-6 text-sm">
-            <a href="#" className="hover:text-yellow-300">Search</a>
-            <a href="#" className="hover:text-yellow-300">Take portal</a>
-            <a href="#" className="hover:text-yellow-300">Support</a>
-            <a href="#" className="hover:text-yellow-300">Sign in</a>
-            <Button className="bg-gradient-to-r from-purple-500 to-cyan-400 hover:from-purple-600 hover:to-cyan-500 text-white px-4 py-1.5 rounded-lg shadow-md transition">
-              Register
-            </Button>
-          </div>
-        </div>
-
-        {/* Search Bar */}
-        <div className="mt-4 flex justify-center">
-            <div className="relative bg-white/10 backdrop-blur-lg rounded-xl shadow-md w-full max-w-xl">
-                <Input
-                placeholder="Search User"
-                className="pl-4 pr-24 py-3 bg-transparent text-gray-100 placeholder-gray-400 border-none focus:ring-0 rounded-xl w-full"
-                />
-                <Button className="absolute right-0 top-0 h-full px-6 bg-gradient-to-r from-purple-500 to-cyan-400 hover:opacity-90 text-white rounded-r-xl rounded-l-none">
-                Search
-                </Button>
-            </div>
-        </div>
-      </header>
+      <Navbar />
 
       {/* Feed Section */}
       <div className="container mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-3 gap-6">

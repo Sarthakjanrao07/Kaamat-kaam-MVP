@@ -1,30 +1,13 @@
 import { Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Navbar from "@/src/components/Navbar";
+
 
 export default function Book_Waiting() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e] text-gray-100">
       {/* Navbar */}
-      <header className="bg-black/30 backdrop-blur-lg border-b border-white/10 px-4 py-3 shadow-lg">
-        <div className="flex items-center justify-between container mx-auto">
-          {/* Logo */}
-          <div className="flex items-center gap-2 cursor-pointer" onClick={() => window.location.href = "/"}>
-            <div className="w-7 h-7 bg-gradient-to-r from-purple-500 to-cyan-400 rounded flex items-center justify-center">
-              <Search className="w-4 h-4 text-white" />
-            </div>
-            <span className="font-semibold text-lg bg-gradient-to-r from-purple-400 to-cyan-300 bg-clip-text text-transparent">
-              Kawasaki-ikhim
-            </span>
-          </div>
-
-          {/* Navigation */}
-          <div className="flex items-center gap-6 text-sm">
-            <a href="/details_available" className="hover:text-yellow-300">Search</a>
-            <a href="/get_parcel" className="hover:text-yellow-300">Take parcel</a>
-            <a href="/Support" className="hover:text-yellow-300">Support</a>
-          </div>
-        </div>
-      </header>
+      <Navbar />
 
       {/* Main Content */}
       <div className="flex items-center justify-center min-h-[calc(100vh-64px)] px-4">
