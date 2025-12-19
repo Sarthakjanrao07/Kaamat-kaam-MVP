@@ -7,28 +7,6 @@ export default function Index() {
   return (
     <div className="min-h-screen bg-gray-100">
       {/* Header */}
-      <header className="bg-purple-600 text-white px-4 py-3">
-        <div className="flex items-center justify-between">
-          {/* Logo */}
-          <div className="flex items-center gap-2 cursor-pointer" onClick={() => window.location.href = "/"}>
-            <div className="w-6 h-6 bg-yellow-400 rounded flex items-center justify-center">
-              <Search className="w-3 h-3 text-purple-600" />
-            </div>
-            <span className="font-medium text-sm">Homato</span>
-          </div>
-
-          {/* Navigation */}
-          <div className="flex items-center gap-6 text-sm">
-            <a href="#" className="hover:text-purple-200">Search</a>
-            <a href="#" className="hover:text-purple-200">Take parcel</a>
-            <a href="#" className="hover:text-purple-200">Support</a>
-            <a href="#" className="hover:text-purple-200">Sign in</a>
-            <Button variant="outline" size="sm" className="text-black border-white hover:bg-white hover:text-purple-600">
-              Register
-            </Button>
-          </div>
-        </div>
-      </header>
 
       {/* Main Content */}
       <div className="flex justify-center py-8">

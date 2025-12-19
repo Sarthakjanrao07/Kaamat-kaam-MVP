@@ -5,35 +5,6 @@ export default function order_booked() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-black text-white">
       {/* Header */}
-      <header className="bg-black/30 backdrop-blur-lg border-b border-white/10 px-4 py-3 shadow-lg">
-        <div className="flex items-center justify-between container mx-auto">
-          {/* Logo */}
-          <div
-            className="flex items-center gap-2 cursor-pointer"
-            onClick={() => (window.location.href = "/")}
-          >
-            <div className="w-7 h-7 bg-gradient-to-r from-purple-500 to-cyan-400 rounded flex items-center justify-center">
-              <Search className="w-4 h-4 text-white" />
-            </div>
-            <span className="font-semibold text-lg bg-gradient-to-r from-purple-400 to-cyan-300 bg-clip-text text-transparent">
-              Homato
-            </span>
-          </div>
-
-          {/* Navigation */}
-          <div className="flex items-center gap-6 text-sm">
-            <a href="/details_available" className="hover:text-yellow-300">
-              Search
-            </a>
-            <a href="/get_parcel" className="hover:text-yellow-300">
-              Take parcel
-            </a>
-            <a href="/support" className="hover:text-yellow-300">
-              Support
-            </a>
-          </div>
-        </div>
-      </header>
 
       {/* Main Content */}
       <div className="flex items-center justify-center min-h-[85vh] px-4">

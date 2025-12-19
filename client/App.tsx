@@ -25,6 +25,7 @@ import SupportPage from "./pages/support";
 import SignIn from "./pages/sign_in";
 import ForgotPassword from "./pages/forgot_password";
 import Register from "./pages/register";
+import MainLayout from "./layouts/MainLayout";
 
 
 const queryClient = new QueryClient();
@@ -34,32 +35,28 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/account_page" element={<Index />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/sign_in" element={<SignIn />} />
-          <Route path="/forgot_password" element={<ForgotPassword />} />
-          <Route path="/" element={<Publish_Route />} />
-          <Route path="/order_booked" element={<OrderBooked />} />
-          <Route path="/Book_Waiting" element={<Book_Waiting />} />
-          <Route path="/buy_now" element={<Buy_Now />} />
-          <Route path="/cancel_booking" element={<Cancel_Booking />} />
-          <Route path="/details_available" element={<Details_available />} />
-          <Route path="/get_parcel" element={<Get_Parcel />} />
-          <Route path="/conversation" element={<Glow_Nest />} />
-          <Route path="/publish_route" element={<Publish_Route />} />
-          <Route path="/pick_up" element={<Pick_Up />} />
-          <Route path="/route_map" element={<Route_Map />} />
-          <Route path="/verify_details" element={<Verify_details />} />
-          {/* <Route path="/landing_page" element={<Landing_Page />} /> */}
-          <Route path="/support" element={<SupportPage />} />
-          <Route path="/NotFound" element={<NotFound />} />
+     <BrowserRouter>
+  <Routes>
+    {/* Pages WITH navbar */}
+    <Route element={<MainLayout />}>
+      <Route path="/" element={<Publish_Route />} />
+      <Route path="/details_available" element={<Details_available />} />
+      <Route path="/get_parcel" element={<Get_Parcel />} />
+      <Route path="/pick_up" element={<Pick_Up />} />
+      <Route path="/buy_now" element={<Buy_Now />} />
+      <Route path="/order_booked" element={<OrderBooked />} />
+      <Route path="/cancel_booking" element={<Cancel_Booking />} />
+      <Route path="/support" element={<SupportPage />} />
+    </Route>
 
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
+    {/* Auth pages WITHOUT navbar */}
+    <Route path="/sign_in" element={<SignIn />} />
+    <Route path="/register" element={<Register />} />
+    <Route path="/forgot_password" element={<ForgotPassword />} />
+
+    <Route path="*" element={<NotFound />} />
+  </Routes>
+</BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
 );

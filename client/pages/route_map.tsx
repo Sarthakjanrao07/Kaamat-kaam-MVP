@@ -21,7 +21,6 @@ export default function Route_Map() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e] text-white">
       {/* Header */}
-      <Navbar />
 
       <div className="flex flex-col lg:flex-row h-[calc(100vh-56px)]">
         {/* Left Panel */}
