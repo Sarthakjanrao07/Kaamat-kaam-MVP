@@ -7,7 +7,6 @@ export default function Book_Waiting() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e] text-gray-100">
       {/* Navbar */}
-      <Navbar />
 
       {/* Main Content */}
       <div className="flex items-center justify-center min-h-[calc(100vh-64px)] px-4">

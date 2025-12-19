@@ -2,14 +2,12 @@ import { Search, User, LogOut } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useNavigate } from "react-router-dom";
 
-// TEMP auth check (later replace with context / backend)
-const isAuthenticated = () => {
-  return Boolean(localStorage.getItem("token"));
-};
+interface NavbarProps {
+  isAuthenticated: boolean;
+}
 
-export default function Navbar() {
+export default function Navbar({ isAuthenticated }: NavbarProps) {
   const navigate = useNavigate();
-  const loggedIn = isAuthenticated();
 
   const handleLogout = () => {
     localStorage.removeItem("token");
@@ -46,7 +44,7 @@ export default function Navbar() {
           </Link>
 
           {/* Auth Section */}
-          {!loggedIn ? (
+          {!isAuthenticated ? (
             <>
               <Link to="/sign_in" className="hover:text-yellow-300">
                 Sign in

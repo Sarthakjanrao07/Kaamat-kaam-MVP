@@ -2,8 +2,11 @@ import { Search, MapPin, Calendar, Star, Phone, Mail, DollarSign, Shield, Users,
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
+import { useNavigate } from "react-router-dom";
+
 
 export default function Publish_Route() {
+  const navigate = useNavigate();
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e] text-gray-100">
   {/* Header */}
@@ -45,7 +48,10 @@ export default function Publish_Route() {
             />
           </div>
 
-          <Button className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white py-3 rounded-lg shadow-md">
+          <Button
+            onClick={() => navigate("/pick_up")}
+            className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white py-3 rounded-lg shadow-md"
+          >
             Publish to route
           </Button>
         </form>

@@ -13,6 +13,7 @@ import Book_Waiting from "./pages/book_waiting";
 import Details from "./pages/details";
 import Get_Parcel from "./pages/get_parcel";
 import Pick_Up from "./pages/pick_up";
+import Drop_Off from "./pages/drop_off";
 import Publish_Route from "./pages/publish_route";
 import Route_Map from "./pages/route_map";
 import Verify_details from "./pages/verify_details";
@@ -26,6 +27,9 @@ import SignIn from "./pages/sign_in";
 import ForgotPassword from "./pages/forgot_password";
 import Register from "./pages/register";
 import MainLayout from "./layouts/MainLayout";
+import Select_Date from "./pages/select_date";
+
+
 
 
 const queryClient = new QueryClient();
@@ -41,8 +45,13 @@ const App = () => (
     <Route element={<MainLayout />}>
       <Route path="/" element={<Publish_Route />} />
       <Route path="/details_available" element={<Details_available />} />
+
       <Route path="/get_parcel" element={<Get_Parcel />} />
       <Route path="/pick_up" element={<Pick_Up />} />
+      <Route path="/drop_off" element={<Drop_Off />} />
+      <Route path="/route_map" element={<Route_Map />} />
+
+
       <Route path="/buy_now" element={<Buy_Now />} />
       <Route path="/order_booked" element={<OrderBooked />} />
       <Route path="/cancel_booking" element={<Cancel_Booking />} />
@@ -54,6 +63,7 @@ const App = () => (
     <Route path="/register" element={<Register />} />
     <Route path="/forgot_password" element={<ForgotPassword />} />
 
+    <Route path="/select_date" element={<Select_Date />} />
     <Route path="*" element={<NotFound />} />
   </Routes>
 </BrowserRouter>

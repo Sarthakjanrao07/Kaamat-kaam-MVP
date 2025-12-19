@@ -34,7 +34,7 @@ export default function Conversation() {
     <div className="min-h-screen bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e] text-gray-100">
       
       {/* Navbar */}
-      <Navbar />
+  
 
       {/* Feed Section */}
       <div className="container mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-3 gap-6">

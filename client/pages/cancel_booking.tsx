@@ -8,7 +8,6 @@ export default function CancelBooking() {
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-black text-white">
       
       {/* Header */}
-      <Navbar />
 
       {/* Cancel Warning */}
       <div className="flex items-center justify-center min-h-[85vh] px-4">
